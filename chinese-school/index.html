@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark-red">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龙 Дракон | Онлайн-школа китайского языка с нуля</title>
+    <meta name="description" content="Изучай китайский язык с нуля с лучшими преподавателями. Интерактивные уроки, разговорный клуб, HSK подготовка.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+<body>
+
+<!-- ============ ПРЕЛОАДЕР ============ -->
+<div class="preloader" id="preloader">
+    <div class="preloader-dragon">
+        <span class="hanzi-loader">龙</span>
+        <div class="preloader-ring"></div>
+    </div>
+    <p class="preloader-text">Загружаем мудрость Поднебесной...</p>
+</div>
+
+<!-- ============ КУРСОР ============ -->
+<div class="custom-cursor" id="cursor"></div>
+<div class="custom-cursor-follower" id="cursorFollower"></div>
+
+<!-- ============ ПРОГРЕСС-БАР СКРОЛЛА ============ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ ЧАСТИЦЫ ФОНА ============ -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ============ ХЕДЕР ============ -->
+<header class="header" id="header">
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <span class="logo-hanzi">龙</span>
+            <span class="logo-text">
+                <strong>Дракон</strong>
+                <small>中文 школа</small>
+            </span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="#courses" class="nav-link">Курсы</a>
+            <a href="#teachers" class="nav-link">Преподаватели</a>
+            <a href="#method" class="nav-link">Методика</a>
+            <a href="#reviews" class="nav-link">Отзывы</a>
+            <a href="#pricing" class="nav-link">Цены</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="icon-btn theme-toggle" id="themeToggle" title="Сменить тему">
+                <i class="fas fa-palette"></i>
+            </button>
+            <button class="icon-btn" id="searchBtn" title="Поиск">
+                <i class="fas fa-search"></i>
+            </button>
+            <a href="#trial" class="btn btn-primary btn-glow">
+                <i class="fas fa-gift"></i> Пробный урок
+            </a>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ============ МОБИЛЬНОЕ МЕНЮ ============ -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#courses">Курсы</a>
+    <a href="#teachers">Преподаватели</a>
+    <a href="#method">Методика</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#pricing">Цены</a>
+    <a href="#faq">FAQ</a>
+    <a href="#trial" class="btn btn-primary">Пробный урок</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+    <div class="hero-bg">
+        <div class="hero-glow"></div>
+        <div class="hero-pattern"></div>
+    </div>
+
+    <div class="container hero-inner">
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="pulse-dot"></span>
+                <span>Набор на новый поток открыт — скидка 40%</span>
+            </div>
+
+            <h1 class="hero-title reveal">
+                Изучи <span class="gradient-text">китайский</span><br>
+                с нуля до <span class="highlight-hanzi">流利</span>
+            </h1>
+
+            <p class="hero-subtitle reveal">
+                От первого «нихао» до свободного общения с носителями.
+                Живые уроки, интерактивная платформа, разговорный клуб
+                24/7 и подготовка к HSK 1–6.
+            </p>
+
+            <div class="hero-actions reveal">
+                <a href="#trial" class="btn btn-primary btn-lg btn-glow">
+                    <i class="fas fa-play"></i> Начать бесплатно
+                </a>
+                <a href="#courses" class="btn btn-outline btn-lg">
+                    <i class="fas fa-compass"></i> Смотреть курсы
+                </a>
+            </div>
+
+            <div class="hero-stats reveal">
+                <div class="stat">
+                    <span class="stat-num" data-count="8500">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">учеников</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-count="98">0</span><span class="stat-plus">%</span>
+                    <span class="stat-label">довольны</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-count="45">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">преподавателей</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-count="12">0</span>
+                    <span class="stat-label">лет опыта</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual reveal">
+            <div class="hero-card-stack">
+                <div class="floating-card card-1">
+                    <div class="fc-icon">📚</div>
+                    <div class="fc-text">
+                        <strong>HSK 1-6</strong>
+                        <small>Подготовка</small>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="fc-icon">🎓</div>
+                    <div class="fc-text">
+                        <strong>Носители</strong>
+                        <small>Преподаватели</small>
+                    </div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="fc-icon">⚡</div>
+                    <div class="fc-text">
+                        <strong>24/7</strong>
+                        <small>Поддержка</small>
+                    </div>
+                </div>
+
+                <div class="hero-main-card">
+                    <div class="hmc-header">
+                        <span class="hmc-dot"></span>
+                        <span class="hmc-dot"></span>
+                        <span class="hmc-dot"></span>
+                        <span class="hmc-title">Урок 1 · Приветствие</span>
+                    </div>
+                    <div class="hmc-body">
+                        <div class="hmc-word">
+                            <div class="hmc-hanzi">你好</div>
+                            <div class="hmc-pinyin">nǐ hǎo</div>
+                            <div class="hmc-translate">Привет</div>
+                        </div>
+                        <div class="hmc-progress">
+                            <div class="hmc-progress-fill"></div>
+                        </div>
+                        <div class="hmc-lesson-info">
+                            <span><i class="fas fa-fire"></i> 7 дней подряд</span>
+                            <span><i class="fas fa-star"></i> +120 XP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="floating-card card-4">
+                    <div class="fc-icon">🏆</div>
+                    <div class="fc-text">
+                        <strong>+2500 XP</strong>
+                        <small>за неделю</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-scroll">
+        <span>Листай вниз</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- ============ БЕГУЩАЯ СТРОКА ============ -->
+<div class="marquee">
+    <div class="marquee-track">
+        <span>你好</span><span>•</span><span>谢谢</span><span>•</span><span>中国</span><span>•</span>
+        <span>学习</span><span>•</span><span>朋友</span><span>•</span><span>汉语</span><span>•</span>
+        <span>老师</span><span>•</span><span>语言</span><span>•</span><span>文化</span><span>•</span>
+        <span>你好</span><span>•</span><span>谢谢</span><span>•</span><span>中国</span><span>•</span>
+        <span>学习</span><span>•</span><span>朋友</span><span>•</span><span>汉语</span><span>•</span>
+        <span>老师</span><span>•</span><span>语言</span><span>•</span><span>文化</span><span>•</span>
+    </div>
+</div>
+
+<!-- ============ ПРЕИМУЩЕСТВА ============ -->
+<section class="features section" id="method">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Почему мы</span>
+            <h2 class="section-title">Учиться — это <span class="gradient-text">искусство</span></h2>
+            <p class="section-subtitle">Мы объединили древнюю мудрость Востока и современные технологии</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card reveal" data-tilt>
+                <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                <h3>Разговорный клуб 24/7</h3>
+                <p>Практикуй язык с носителями и другими учениками в любое время суток</p>
+            </div>
+            <div class="feature-card reveal" data-tilt>
+                <div class="feature-icon"><i class="fas fa-gamepad"></i></div>
+                <h3>Геймификация</h3>
+                <p>XP, уровни, достижения, ежедневные стрики и рейтинг — учись как в игре</p>
+            </div>
+            <div class="feature-card reveal" data-tilt>
+                <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                <h3>AI-репетитор</h3>
+                <p>Персональный ассистент исправит произношение и объяснит грамматику</p>
+            </div>
+            <div class="feature-card reveal" data-tilt>
+                <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Подготовка к HSK</h3>
+                <p>Гарантированная сдача экзамена HSK 1–6 или вернём деньги</p>
+            </div>
+            <div class="feature-card reveal" data-tilt>
+                <div class="feature-icon"><i class="fas fa-video"></i></div>
+                <h3>Живые вебинары</h3>
+                <p>Более 30 онлайн-встреч в месяц: грамматика, разговор, культура</p>
+            </div>
+            <div class="feature-card reveal" data-tilt>
+                <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Приложение</h3>
+                <p>Учись с телефона: iOS и Android, синхронизация прогресса</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ КУРСЫ ============ -->
+<section class="courses section" id="courses">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Программы</span>
+            <h2 class="section-title">Выбери свой <span class="gradient-text">путь</span></h2>
+            <p class="section-subtitle">От полного нуля до профессионального уровня</p>
+        </div>
+
+        <div class="courses-tabs reveal">
+            <button class="tab-btn active" data-tab="beginner">С нуля</button>
+            <button class="tab-btn" data-tab="intermediate">Средний</button>
+            <button class="tab-btn" data-tab="advanced">Продвинутый</button>
+            <button class="tab-btn" data-tab="hsk">HSK</button>
+        </div>
+
+        <div class="courses-grid" id="coursesGrid">
+            <!-- Заполняется JS -->
+        </div>
+    </div>
+</section>
+
+<!-- ============ ПРЕПОДАВАТЕЛИ ============ -->
+<section class="teachers section" id="teachers">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Команда</span>
+            <h2 class="section-title">Наши <span class="gradient-text">наставники</span></h2>
+            <p class="section-subtitle">Носители языка и сертифицированные преподаватели</p>
+        </div>
+
+        <div class="teachers-slider" id="teachersSlider">
+            <!-- Заполняется JS -->
+        </div>
+
+        <div class="slider-controls">
+            <button class="slider-btn" id="prevTeacher"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn" id="nextTeacher"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- ============ КАЛЬКУЛЯТОР ПРОГРЕССА ============ -->
+<section class="level-test section">
+    <div class="container">
+        <div class="level-test-box reveal">
+            <div class="lt-left">
+                <span class="section-tag">Интерактив</span>
+                <h2>Узнай свой <span class="gradient-text">уровень</span></h2>
+                <p>Пройди короткий тест — и мы подберём идеальный курс именно для тебя</p>
+                <button class="btn btn-primary btn-glow" id="startTest">
+                    <i class="fas fa-brain"></i> Пройти тест (2 мин)
+                </button>
+            </div>
+            <div class="lt-right">
+                <div class="lt-circle">
+                    <svg viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="85" class="lt-track"></circle>
+                        <circle cx="100" cy="100" r="85" class="lt-progress" id="ltProgress"></circle>
+                    </svg>
+                    <div class="lt-center">
+                        <span class="lt-percent" id="ltPercent">0%</span>
+                        <span class="lt-label">готовность</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ ОТЗЫВЫ ============ -->
+<section class="reviews section" id="reviews">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Отзывы</span>
+            <h2 class="section-title">Истории <span class="gradient-text">успеха</span></h2>
+            <p class="section-subtitle">Более 8500 учеников уже говорят на китайском</p>
+        </div>
+
+        <div class="reviews-grid" id="reviewsGrid">
+            <!-- Заполняется JS -->
+        </div>
+    </div>
+</section>
+
+<!-- ============ ЦЕНЫ ============ -->
+<section class="pricing section" id="pricing">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Тарифы</span>
+            <h2 class="section-title">Прозрачные <span class="gradient-text">цены</span></h2>
+            <p class="section-subtitle">Без скрытых платежей. Отмена в любой момент.</p>
+        </div>
+
+        <div class="pricing-toggle reveal">
+            <span>Месяц</span>
+            <button class="toggle-switch" id="pricingToggle" aria-label="Переключить период">
+                <span class="toggle-knob"></span>
+            </button>
+            <span>Год <span class="discount-badge">-30%</span></span>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="price-card reveal">
+                <h3>Старт</h3>
+                <p class="price-desc">Для знакомства с языком</p>
+                <div class="price">
+                    <span class="price-currency">₽</span>
+                    <span class="price-value" data-month="2990" data-year="2090">2990</span>
+                    <span class="price-period">/мес</span>
+                </div>
+                <ul class="price-features">
+                    <li><i class="fas fa-check"></i> 8 групповых уроков</li>
+                    <li><i class="fas fa-check"></i> Доступ к платформе</li>
+                    <li><i class="fas fa-check"></i> Домашние задания</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Разговорный клуб</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Индивидуальные уроки</li>
+                </ul>
+                <a href="#trial" class="btn btn-outline btn-full">Выбрать</a>
+            </div>
+
+            <div class="price-card featured reveal">
+                <div class="featured-badge">🔥 Хит продаж</div>
+                <h3>Оптимум</h3>
+                <p class="price-desc">Самый популярный выбор</p>
+                <div class="price">
+                    <span class="price-currency">₽</span>
+                    <span class="price-value" data-month="5990" data-year="4190">5990</span>
+                    <span class="price-period">/мес</span>
+                </div>
+                <ul class="price-features">
+                    <li><i class="fas fa-check"></i> 16 групповых уроков</li>
+                    <li><i class="fas fa-check"></i> Разговорный клуб 24/7</li>
+                    <li><i class="fas fa-check"></i> AI-репетитор</li>
+                    <li><i class="fas fa-check"></i> Персональный куратор</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Индивидуальные уроки</li>
+                </ul>
+                <a href="#trial" class="btn btn-primary btn-full btn-glow">Выбрать</a>
+            </div>
+
+            <div class="price-card reveal">
+                <h3>Премиум</h3>
+                <p class="price-desc">Максимальный результат</p>
+                <div class="price">
+                    <span class="price-currency">₽</span>
+                    <span class="price-value" data-month="12990" data-year="9090">12990</span>
+                    <span class="price-period">/мес</span>
+                </div>
+                <ul class="price-features">
+                    <li><i class="fas fa-check"></i> Всё из «Оптимум»</li>
+                    <li><i class="fas fa-check"></i> 8 индивидуальных уроков</li>
+                    <li><i class="fas fa-check"></i> Носитель языка</li>
+                    <li><i class="fas fa-check"></i> Подготовка к HSK</li>
+                    <li><i class="fas fa-check"></i> Персональный ментор</li>
+                </ul>
+                <a href="#trial" class="btn btn-outline btn-full">Выбрать</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq section" id="faq">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Вопросы</span>
+            <h2 class="section-title">Частые <span class="gradient-text">вопросы</span></h2>
+        </div>
+
+        <div class="faq-list" id="faqList">
+            <!-- Заполняется JS -->
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA / ПРОБНЫЙ УРОК ============ -->
+<section class="cta section" id="trial">
+    <div class="container">
+        <div class="cta-box reveal">
+            <div class="cta-glow"></div>
+            <div class="cta-content">
+                <span class="cta-hanzi">免费</span>
+                <h2>Первый урок — <span class="gradient-text">бесплатно</span></h2>
+                <p>Запишись на пробное занятие с преподавателем и получи персональный план обучения</p>
+
+                <form class="cta-form" id="trialForm">
+                    <div class="form-row">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="tel" placeholder="Телефон" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" placeholder="Email" required>
+                        <select required>
+                            <option value="">Уровень</option>
+                            <option>С нуля</option>
+                            <option>Начальный</option>
+                            <option>Средний</option>
+                            <option>Продвинутый</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-full btn-glow">
+                        <i class="fas fa-paper-plane"></i> Записаться на пробный урок
+                    </button>
+                    <p class="form-note"><i class="fas fa-lock"></i> Мы не передаём данные третьим лицам</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ ФУТЕР ============ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo">
+                    <span class="logo-hanzi">龙</span>
+                    <span class="logo-text">
+                        <strong>Дракон</strong>
+                        <small>中文 школа</small>
+                    </span>
+                </a>
+                <p class="footer-desc">Онлайн-школа китайского языка №1 в СНГ. Учим говорить, а не просто зубрить.</p>
+                <div class="socials">
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Обучение</h4>
+                <a href="#courses">Курсы</a>
+                <a href="#teachers">Преподаватели</a>
+                <a href="#method">Методика</a>
+                <a href="#pricing">Цены</a>
+                <a href="#trial">Пробный урок</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Компания</h4>
+                <a href="#">О нас</a>
+                <a href="#">Блог</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Партнёрам</a>
+                <a href="#">Контакты</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <a href="tel:+78001234567"><i class="fas fa-phone"></i> +7 (800) 123-45-67</a>
+                <a href="mailto:hello@dragon.cn"><i class="fas fa-envelope"></i> hello@dragon.cn</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Москва, ул. Дракона 1</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Онлайн-школа «Дракон». Все права защищены.</p>
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Публичная оферта</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ КНОПКА ВВЕРХ ============ -->
+<button class="scroll-top" id="scrollTop" aria-label="Наверх">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ============ УВЕДОМЛЕНИЯ ============ -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- ============ МОДАЛКА ТЕСТА ============ -->
+<div class="modal" id="testModal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+        <div class="modal-body" id="modalBody">
+            <!-- Заполняется JS -->
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/interactive.js"></script>
+</body>
+</html>

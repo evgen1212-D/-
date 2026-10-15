@@ -1,0 +1,77 @@
+/* ============================================================
+   ТЕМА 1: КРАСНО-ЧЁРНАЯ (по умолчанию) — 龙
+   ============================================================ */
+[data-theme="dark-red"] {
+    --bg: #0a0505;
+    --bg-card: #150a0a;
+    --bg-glass: rgba(10, 5, 5, 0.85);
+    --text: #f5e6e6;
+    --text-muted: #a88a8a;
+    --accent: #dc2626;
+    --accent-2: #f59e0b;
+    --accent-3: #fbbf24;
+    --accent-glow: rgba(220, 38, 38, 0.35);
+    --accent-2-glow: rgba(245, 158, 11, 0.3);
+    --border: rgba(220, 38, 38, 0.15);
+    --border-strong: rgba(220, 38, 38, 0.4);
+}
+
+/* ============================================================
+   ТЕМА 2: ИМПЕРАТОРСКАЯ (светлая) — 金
+   ============================================================ */
+[data-theme="light-gold"] {
+    --bg: #fdf8f0;
+    --bg-card: #ffffff;
+    --bg-glass: rgba(253, 248, 240, 0.85);
+    --text: #1a0f0a;
+    --text-muted: #7a5c4a;
+    --accent: #b91c1c;
+    --accent-2: #d97706;
+    --accent-3: #f59e0b;
+    --accent-glow: rgba(185, 28, 28, 0.2);
+    --accent-2-glow: rgba(217, 119, 6, 0.2);
+    --border: rgba(185, 28, 28, 0.12);
+    --border-strong: rgba(185, 28, 28, 0.35);
+}
+
+/* ============================================================
+   ТЕМА 3: НЕФРИТОВАЯ (тёмно-зелёная) — 玉
+   ============================================================ */
+[data-theme="dark-jade"] {
+    --bg: #04100c;
+    --bg-card: #0a1c15;
+    --bg-glass: rgba(4, 16, 12, 0.85);
+    --text: #e6f5ee;
+    --text-muted: #7ca898;
+    --accent: #10b981;
+    --accent-2: #34d399;
+    --accent-3: #fbbf24;
+    --accent-glow: rgba(16, 185, 129, 0.35);
+    --accent-2-glow: rgba(52, 211, 153, 0.3);
+    --border: rgba(16, 185, 129, 0.15);
+    --border-strong: rgba(16, 185, 129, 0.4);
+}
+
+/* ============================================================
+   ТЕМА 4: ИМПЕРАТОРСКАЯ НОЧЬ (тёмно-синяя) — 夜
+   ============================================================ */
+[data-theme="dark-night"] {
+    --bg: #050510;
+    --bg-card: #0c0c22;
+    --bg-glass: rgba(5, 5, 16, 0.85);
+    --text: #e6e6f5;
+    --text-muted: #8888a8;
+    --accent: #6366f1;
+    --accent-2: #a855f7;
+    --accent-3: #fbbf24;
+    --accent-glow: rgba(99, 102, 241, 0.35);
+    --accent-2-glow: rgba(168, 85, 247, 0.3);
+    --border: rgba(99, 102, 241, 0.15);
+    --border-strong: rgba(99, 102, 241, 0.4);
+}
+
+/* Плавный переход между темами */
+body, .header, .feature-card, .course-card, .price-card, .review-card,
+.faq-item, .cta-box, .modal-content, .footer {
+    transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+}
